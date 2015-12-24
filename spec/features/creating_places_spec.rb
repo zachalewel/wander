@@ -9,7 +9,9 @@ feature 'Creating places' do
 
     click_button 'Create Place'
 
-    expect(page).to have_content("Success")
+    expect(page).to have_content("Place was successfully created.")
 
   end
+
+
 end
