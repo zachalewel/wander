@@ -12,6 +12,4 @@ feature 'Creating places' do
     expect(page).to have_content("Place was successfully created.")
 
   end
-
-
 end
