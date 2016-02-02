@@ -12,6 +12,26 @@ class PlacesController < ApplicationController
   def show
   end
 
+  def welcome
+  end
+
+  def find_place
+    respond_to do |format|
+      format.js
+    end
+    @activity = @activity
+    @name = @name
+    @state = @state
+  end
+
+  def build_hash(search_params)
+  search_params.each do |p|
+    p
+    p
+    p
+  end
+  end
+
   # GET /places/new
   def new
     @place = Place.new
@@ -70,5 +90,9 @@ class PlacesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
       params.require(:place).permit(:name, :activity, :latitude, :longitude, :state, :geocoded_name, :description, :directions, :comments, :picture)
+    end
+
+    def search_params
+      params.require(:place).permit(:activity, :name, :state)
     end
 end

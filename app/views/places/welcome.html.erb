@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <br>
+
+  <div class="row">
+    <div class="col-md-12 col-xs-12">
+      <h1 style="text-align: center">Welcome:</h1>
+
+      <h1 style="text-align: center">At Ramble our goal is to connect you to the outdoors.</h1>
+    </div>
+  </div>
+
+  <div style="text-align: center">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">What
+      would you like to do?
+    </button>
+    <div id="jsTrial">
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+          &times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel" style="text-align: center">Choose your activity</h4>
+        </div>
+
+        <div class="modal-body">
+          <div class="row" id="modalChoices">
+
+            <div class="col-md-12 col-xs-12" id="modalPictures"><h3 style="text-align: center">Hiking</h3>
+
+              <div class="row" id="imageLink">
+                <a href="<%= places_path %>"></a>
+                <%= image_tag('hiking-boots') %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="modalChoices">
+
+            <div class="col-md-12 col-xs-12" id="modalPictures"><h3 style="text-align: center">Mountain Biking</h3>
+
+              <div class="row" id="imageLink">
+                <%= link_to 'Places', search_path, :remote => true %>
+                <%= image_tag('mountain-biking-min') %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="modalChoices">
+
+            <div class="col-md-12 col-s-12" id="modalPictures"><h3 style="text-align: center">Camping</h3>
+
+              <div class="row" id="imageLink">
+                <a href="<%= places_path %>"></a>
+                <%= image_tag('camping-min') %>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+  </div>
+</div>

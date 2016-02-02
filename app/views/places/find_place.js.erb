@@ -1,0 +1,5 @@
+$('#myModal').modal('hide')
+function f() {
+  $('#jsTrial').html("<%= escape_javascript(render :partial => 'find_place') %>")
+}
+setTimeout(f, 500)
