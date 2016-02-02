@@ -5,12 +5,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'places#welcome'
+  root 'places#welcome'
 
-   get 'login' => 'sessions#login'
-   post 'login' => 'sessions#create'
-   delete 'Logout', to: 'sessions#destroy', as: 'logout'
-   get 'search', to: 'places#find_place', as: 'search'
+  get 'login' => 'sessions#login'
+  post 'login' => 'sessions#create'
+  delete 'Logout', to: 'sessions#destroy', as: 'logout'
+  get 'search', to: 'places#find_place', as: 'search'
 
 
   # Example of regular route:

@@ -25,11 +25,11 @@ class PlacesController < ApplicationController
   end
 
   def build_hash(search_params)
-  search_params.each do |p|
-    p
-    p
-    p
-  end
+    search_params.each do |p|
+      p
+      p
+      p
+    end
   end
 
   # GET /places/new
@@ -82,17 +82,17 @@ class PlacesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_place
-      @place = Place.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_place
+    @place = Place.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def place_params
-      params.require(:place).permit(:name, :activity, :latitude, :longitude, :state, :geocoded_name, :description, :directions, :comments, :picture)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def place_params
+    params.require(:place).permit(:name, :activity, :latitude, :longitude, :state, :geocoded_name, :description, :directions, :comments, :picture)
+  end
 
-    def search_params
-      params.require(:place).permit(:activity, :name, :state)
-    end
+  def search_params
+    params.require(:place).permit(:activity, :name, :state)
+  end
 end
