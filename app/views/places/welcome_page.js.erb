@@ -1,0 +1,5 @@
+$('#myModal').modal('hide');
+function popup() {
+  $('#jsTrial').html("<%= escape_javascript(render :partial => 'welcome_page') %>")
+}
+setTimeout(popup, 500);

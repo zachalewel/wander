@@ -52,3 +52,15 @@ img {
     height: auto;
   }
 }
+
+#navbar-dropdown {
+    padding-top: 9px;
+}
+
+.btn-default {
+    outline: none;
+}
+
+.edit_users_form {
+    padding: 2% 2% 2% 2%;
+}

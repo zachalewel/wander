@@ -13,15 +13,20 @@ class PlacesController < ApplicationController
   end
 
   def welcome
+
   end
 
-  def find_place
+  def welcome_page
     respond_to do |format|
       format.js
     end
-    @activity = @activity
-    @name = @name
-    @state = @state
+  end
+
+  def find_place
+    @activity = params[:activity]
+    @name = params[:name]
+    @state = params[:state]
+
   end
 
   def build_hash(search_params)
