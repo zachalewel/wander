@@ -30,7 +30,7 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to 'Ramble', root_path, class: "navbar-brand" %>
-          <%= render 'layouts/authentication' %>
+      <%= render 'layouts/authentication' %>
     </div>
   </div>
 </nav>
@@ -46,13 +46,21 @@
 
   <%= yield %>
 </div>
-<!-- Large modal -->
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-        <%= render 'users/form' if current_user.present? %>
+
+<% if current_user.present? %>
+    <!-- Large modal -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <%= render 'users/form' %>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+<% else %>
+    <script type="text/javascript">
+        yo = $('.user-new');
+           setTimeout(function(){yo.modal('show')}, 1000);
+    </script>
+<% end %>
 </body>
 </html>
