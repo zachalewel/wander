@@ -1,0 +1,21 @@
+<% if current_user %>
+    <ul class="nav navbar-nav">
+      <% @user = current_user %>
+      <div class="btn-group" id="navbar-dropdown">
+        <a class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="glyphicon glyphicon-cog" aria-hidden="true"></span><span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a data-toggle="modal" data-target=".bs-example-modal-lg">My Account</a></li>
+          <li><%= link_to "My Planned Trips", root_path %></li>
+          <li role="separator" class="divider"></li>
+          <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+        </ul>
+      </div>
+    </ul>
+<% else %>
+    <ul class="nav navbar-nav">
+      <li><a data-toggle="modal" data-target=".login-modal" class="navbar-brand">Login</a></li>
+      <li><a data-toggle="modal" data-target=".user-new" class="navbar-brand">Sign Up</a></li>
+    </ul>
+<% end %>

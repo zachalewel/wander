@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
-  private 
+  private
 
   def current_user
     @user ||= User.find(session[:id]) if session[:id]

@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+
+
+#imageLink {
+  position: relative;
+}
+
+#imageLink a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  z-index: 1;
+  background-color: #FFF;
+  opacity: 0;
+  filter: alpha(opacity=1);
+}
+#modalChoices {
+  width: 50%;
+  margin: 0 auto;
+}
+
+body {
+  background-image: url('hdr-min.jpg');
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto ;
+}
+
+@media only screen and (min-device-width: 400px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+#navbar-dropdown {
+    padding-top: 9px;
+}
+
+.modal_form {
+    padding: 2% 2% 2% 2%;
+}
