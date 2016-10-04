@@ -1,5 +1,30 @@
 <div class="container-fluid">
-  <br>
+
+  <!-- Modal for new users, Large-->
+  <div class="modal fade user-new" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <h4 style="text-align: center">Please Sign up to use Wander</h4>
+        <%= render 'users/new_form' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Already have an account?</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for logging in, Small-->
+  <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <h4 style="text-align: center">Please sign in to use Wander</h4>
+        <%= render 'sessions/login' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-md-12 col-xs-12">

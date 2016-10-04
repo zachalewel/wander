@@ -1,4 +1,4 @@
-<div class="edit_users_form">
+<div class="modal_form">
   <%= form_for(@user, html: {class: "form-horizontal", role: "form"}) do |f| %>
       <% if @user.errors.any? %>
           <div class="alert alert-danger alert-dismissable" role="alert">
@@ -40,7 +40,11 @@
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <%= f.submit 'Update', class: "btn btn-primary" %>
+          <% if current_user.present? %>
+              <%= f.submit 'Update', class: 'btn btn-primary' %>
+          <% else %>
+              <%= f.submit 'Sign up', class: 'btn btn-primary' %>
+          <% end %>
         </div>
       </div>
   <% end %>
