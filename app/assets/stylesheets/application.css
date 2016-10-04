@@ -57,10 +57,6 @@ img {
     padding-top: 9px;
 }
 
-.btn-default {
-    outline: none;
-}
-
-.edit_users_form {
+.modal_form {
     padding: 2% 2% 2% 2%;
 }
