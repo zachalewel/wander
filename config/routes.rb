@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :trips
   resources :users
   resources :places
   # The priority is based upon order of creation: first created -> highest priority.
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
   get 'search', to: 'places#find_place', as: 'search'
   post 'search', to: 'places#find_place'
   get 'welcome_page', to: 'places#welcome_page'
-
+  post 'trip_users', to: 'trips#join'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -60,3 +60,9 @@ img {
 .modal_form {
     padding: 2% 2% 2% 2%;
 }
+
+#planned-trips {
+    background-image: url("blue_postit.png");
+    background-size: 20%;
+    background-repeat: no-repeat;
+}
